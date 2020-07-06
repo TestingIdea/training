@@ -12,8 +12,8 @@ public class DatabaseConnectionManager {
     public static Connection getConnection() throws SQLException {
         String url = "jdbc:postgresql://10.10.0.242/material-management";
         Properties props = new Properties();
-        props.setProperty("user","vdmihailov");
-        props.setProperty("password","c4tnbmg9w");
+        props.setProperty("user","******");
+        props.setProperty("password","*******");
         props.setProperty("ssl","false");
         return DriverManager.getConnection(url, props);
 
