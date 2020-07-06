@@ -1,7 +1,7 @@
 package isud;
 
-        import db.DatabaseConnectionManager;
-        import java.sql.*;
+import db.DatabaseConnectionManager;
+import java.sql.*;
 
 
 public class divided {
@@ -26,20 +26,17 @@ public class divided {
         ResultSet rs = st.executeQuery("SELECT * From categories;");
         while (rs.next()) {
             System.out.println(rs.getInt(1) + ":" + rs.getString(2) + ":" + rs.getString(3));
-
         }
-    }
-          private static void CheckUpdate () throws SQLException {
-                Connection conn = DatabaseConnectionManager.getConnection();
-                Statement st = conn.createStatement();
-                st.executeUpdate("UPDATE categories SET id=49 WHERE name = 'Testing';");
+     }
+    private static void CheckUpdate () throws SQLException {
+         Connection conn = DatabaseConnectionManager.getConnection();
+         Statement st = conn.createStatement();
+         st.executeUpdate("UPDATE categories SET id=49 WHERE name = 'Testing';");
             }
-
-            private static void CheckDelete () throws SQLException {
-                Connection conn = DatabaseConnectionManager.getConnection();
-                Statement st = conn.createStatement();
-                st.executeUpdate(
-                        "DELETE FROM categories WHERE id = 49 AND name = 'Testing' ");
+    private static void CheckDelete () throws SQLException {
+         Connection conn = DatabaseConnectionManager.getConnection();
+         Statement st = conn.createStatement();
+         st.executeUpdate("DELETE FROM categories WHERE id = 49 AND name = 'Testing' ");
 
     }
 }
