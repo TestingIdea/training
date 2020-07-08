@@ -24,5 +24,10 @@ public class couple {
         st.executeUpdate("UPDATE categories SET id=49 WHERE name = 'Testing';");
         st.executeUpdate(
                 "DELETE FROM categories WHERE id = 49 AND name = 'Testing' ");
+        System.out.println("____________________________________");
+        ResultSet ss = st.executeQuery("SELECT * From categories;");
+        while (ss.next()) {
+            System.out.println(ss.getInt(1) + ":" + ss.getString(2) + ":" +ss.getString(3));
+        }
     }
 }

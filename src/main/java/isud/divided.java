@@ -8,7 +8,7 @@ public class divided {
     public static void main(String[] args) throws SQLException {
        CheckInsert();
        CheckSelect();
-       CheckUpdate();
+      CheckUpdate();
        CheckDelete();
 
 
